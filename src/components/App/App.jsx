@@ -17,7 +17,7 @@ export default class App extends Component{
       filter: ''
     };
 
-  formSubmitHandler = data => {
+  addContact = data => {
     if (this.state.contacts.find(
       contact => contact.name.toLowerCase() === data.name.toLowerCase()
     )) {
@@ -62,7 +62,7 @@ export default class App extends Component{
     return (
       <Container>
         <SectionTitle title="Phonebook">
-          <ContactForm propOnSubmit={this.formSubmitHandler} />  
+          <ContactForm propOnSubmit={this.addContact} />  
         </SectionTitle>
 
         <SectionTitle title="Contacts">
